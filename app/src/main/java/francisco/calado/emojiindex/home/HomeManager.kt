@@ -2,6 +2,7 @@ package francisco.calado.emojiindex.home
 
 import francisco.calado.emojiindex.FragmentNavigator
 import francisco.calado.emojiindex.home.model.Emoji
+import francisco.calado.emojiindex.home.view.EmojiListFragment
 import io.reactivex.Maybe
 import java.util.*
 
@@ -18,6 +19,6 @@ class HomeManager(
     }
 
     fun navigateToEmojiList() {
-        fragmentNavigator
+        fragmentNavigator.navigateToFragment(EmojiListFragment())
     }
 }

@@ -38,7 +38,7 @@ ext {
     rxandroid_version = '2.1.1'
     rxjava_version = '2.2.19'
     retrofit_version = '2.9.0'
-    dagger_version = '2.22'
+    dagger_version = '2.27'
     room_version = "2.2.5"
 
 }
