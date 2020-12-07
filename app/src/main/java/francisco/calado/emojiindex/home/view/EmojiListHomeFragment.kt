@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import francisco.calado.emojiindex.BaseFragment
 import francisco.calado.emojiindex.R
+import francisco.calado.emojiindex.home.BaseHomeFragment
 import francisco.calado.emojiindex.home.model.Emoji
 import io.reactivex.Observable
 import io.reactivex.subjects.PublishSubject
@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.fragment_emoji_list.*
 import javax.inject.Inject
 import javax.inject.Named
 
-class EmojiListFragment : BaseFragment(), EmojiListView {
+class EmojiListHomeFragment : BaseHomeFragment(), EmojiListView {
 
     @field:[Inject Named("emojiListClick")]
     lateinit var emojiListClickSubject: PublishSubject<Int>

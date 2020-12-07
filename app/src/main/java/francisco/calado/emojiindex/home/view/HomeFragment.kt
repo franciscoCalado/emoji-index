@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.jakewharton.rxbinding2.view.RxView
-import francisco.calado.emojiindex.BaseFragment
 import francisco.calado.emojiindex.R
+import francisco.calado.emojiindex.home.BaseHomeFragment
 import francisco.calado.emojiindex.home.model.Emoji
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable
@@ -16,7 +16,7 @@ import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
-class HomeFragment : BaseFragment(), HomeView {
+class HomeFragment : BaseHomeFragment(), HomeView {
 
     @Inject
     lateinit var presenter: HomePresenter
