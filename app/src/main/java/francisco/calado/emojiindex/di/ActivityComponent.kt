@@ -9,5 +9,7 @@ interface ActivityComponent {
 
     fun inject(mainActivity: MainActivity)
 
-    fun plus(homeModule: HomeModule): FragmentComponent
+    fun plus(homeModule: HomeModule): HomeComponent
+
+    fun plus(usersModule: UsersModule): UsersComponent
 }
