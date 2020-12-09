@@ -5,4 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class RoomUser(@PrimaryKey @ColumnInfo(name = "avatar") val avatar: String)
+data class RoomUser(
+    @PrimaryKey @ColumnInfo(name = "name") val name: String,
+    @ColumnInfo(name = "avatar") val avatar: String
+)
