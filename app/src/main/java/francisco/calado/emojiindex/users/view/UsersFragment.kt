@@ -25,7 +25,7 @@ class UsersFragment : BaseUsersFragment(), UsersView {
 
     @Inject
     @Named("usersSubject")
-    lateinit var gridClickSubject: PublishSubject<Pair<User, Int>>
+    lateinit var gridClickSubject: PublishSubject<Int>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -75,7 +75,7 @@ class UsersFragment : BaseUsersFragment(), UsersView {
         return RxView.clicks(search_button).map { search_box.text.toString() }
     }
 
-    override fun userClicked(): Observable<Pair<User, Int>> {
+    override fun userClicked(): Observable<Int> {
         return gridClickSubject
     }
 

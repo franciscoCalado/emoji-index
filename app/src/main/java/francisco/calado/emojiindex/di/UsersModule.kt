@@ -6,7 +6,6 @@ import dagger.Provides
 import francisco.calado.emojiindex.database.AppDatabase
 import francisco.calado.emojiindex.users.UsersManager
 import francisco.calado.emojiindex.users.UsersRepository
-import francisco.calado.emojiindex.users.model.User
 import francisco.calado.emojiindex.users.service.UserService
 import francisco.calado.emojiindex.users.view.UsersFragment
 import francisco.calado.emojiindex.users.view.UsersGridAdapter
@@ -42,13 +41,13 @@ class UsersModule(private val fragment: Fragment) {
     @FragmentScope
     @Provides
     @Named("usersSubject")
-    fun provideUsersSucbject(): PublishSubject<Pair<User, Int>> {
+    fun provideUsersSucbject(): PublishSubject<Int> {
         return PublishSubject.create()
     }
 
     @FragmentScope
     @Provides
-    fun provideUsersGridAdapter(@Named("usersSubject") clickSubject: PublishSubject<Pair<User, Int>>): UsersGridAdapter {
+    fun provideUsersGridAdapter(@Named("usersSubject") clickSubject: PublishSubject<Int>): UsersGridAdapter {
         return UsersGridAdapter(ArrayList(), clickSubject)
     }
 

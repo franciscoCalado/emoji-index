@@ -9,7 +9,7 @@ import io.reactivex.subjects.PublishSubject
 
 class UsersGridAdapter(
     private val dataList: ArrayList<User>,
-    private val clickSubject: PublishSubject<Pair<User, Int>>
+    private val clickSubject: PublishSubject<Int>
 ) : RecyclerView.Adapter<UserGridItem>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserGridItem {
@@ -23,12 +23,7 @@ class UsersGridAdapter(
     override fun onBindViewHolder(holder: UserGridItem, position: Int) {
         holder.bind(dataList[position])
         holder.itemView.setOnClickListener {
-            clickSubject.onNext(
-                Pair(
-                    dataList[position],
-                    position
-                )
-            )
+            clickSubject.onNext(position)
         }
     }
 

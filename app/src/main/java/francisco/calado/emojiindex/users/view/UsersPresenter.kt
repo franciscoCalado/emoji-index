@@ -37,7 +37,7 @@ class UsersPresenter(
     fun deleteUser() {
         subscriptions.add(
             view.userClicked()
-                .doOnNext { result -> view.removeUser(result.second) }
+                .doOnNext { position -> view.removeUser(position) }
                 .subscribe({}, { it.printStackTrace() })
         )
     }
@@ -52,5 +52,4 @@ class UsersPresenter(
     fun clear() {
         subscriptions.clear()
     }
-
 }
