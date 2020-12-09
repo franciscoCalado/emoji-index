@@ -6,4 +6,5 @@
     <string name="users_title">Users</string>
     <string name="search_user">Search user</string>
     <string name="user_avatar_content_description">Avatar</string>
+    <string name="repos_title">Google Repositories</string>
 </resources>

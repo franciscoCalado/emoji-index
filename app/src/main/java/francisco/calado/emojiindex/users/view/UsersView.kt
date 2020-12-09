@@ -7,6 +7,6 @@ interface UsersView {
     fun showUsers(users: List<User>)
     fun addUser(user: User)
     fun searchClicked(): Observable<String>
-    fun userClicked(): Observable<Pair<User, Int>>
+    fun userClicked(): Observable<Int>
     fun removeUser(postion: Int)
 }

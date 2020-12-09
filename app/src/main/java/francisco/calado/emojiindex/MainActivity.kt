@@ -3,6 +3,7 @@ package francisco.calado.emojiindex
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import francisco.calado.emojiindex.home.view.HomeFragment
+import francisco.calado.emojiindex.repos.view.ReposFragment
 import francisco.calado.emojiindex.users.view.UsersFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -17,7 +18,10 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         getActivityComponent().inject(this)
 
-        fragmentNavigator.navigateToInitialFragment(HomeFragment())
+        if (savedInstanceState == null) {
+            fragmentNavigator.navigateToInitialFragment(HomeFragment())
+            (bottom_navigation_bar as BottomNavigationView).selectedItemId = R.id.action_home
+        }
 
         (bottom_navigation_bar as BottomNavigationView).setOnNavigationItemSelectedListener { item ->
 
@@ -31,12 +35,11 @@ class MainActivity : BaseActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.action_repos -> {
-                    //Come back
+                    fragmentNavigator.navigateToFragment(ReposFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> return@setOnNavigationItemSelectedListener false
             }
         }
-        (bottom_navigation_bar as BottomNavigationView).selectedItemId = R.id.action_home
     }
 }
