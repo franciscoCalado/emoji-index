@@ -12,4 +12,6 @@ interface ActivityComponent {
     fun plus(homeModule: HomeModule): HomeComponent
 
     fun plus(usersModule: UsersModule): UsersComponent
+
+    fun plus(reposModule: ReposModule): ReposComponent
 }
