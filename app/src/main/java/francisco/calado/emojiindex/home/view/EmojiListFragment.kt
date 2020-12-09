@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.fragment_emoji_list.*
 import javax.inject.Inject
 import javax.inject.Named
 
-class EmojiListHomeFragment : BaseHomeFragment(), EmojiListView {
+class EmojiListFragment : BaseHomeFragment(), EmojiListView {
 
     @field:[Inject Named("emojiListClick")]
     lateinit var emojiListClickSubject: PublishSubject<Int>

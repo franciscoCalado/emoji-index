@@ -1,7 +1,7 @@
 package francisco.calado.emojiindex.di
 
 import dagger.Subcomponent
-import francisco.calado.emojiindex.home.view.EmojiListHomeFragment
+import francisco.calado.emojiindex.home.view.EmojiListFragment
 import francisco.calado.emojiindex.home.view.HomeFragment
 
 @Subcomponent(modules = [HomeModule::class])
@@ -10,5 +10,5 @@ interface HomeComponent {
 
     fun inject(homeFragment: HomeFragment)
 
-    fun inject(emojiListFragment: EmojiListHomeFragment)
+    fun inject(emojiListFragment: EmojiListFragment)
 }
