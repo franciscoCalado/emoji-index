@@ -7,4 +7,6 @@
     <string name="search_user">Search user</string>
     <string name="user_avatar_content_description">Avatar</string>
     <string name="repos_title">Google Repositories</string>
+    <string name="home_random_button">Random</string>
+    <string name="home_emoji_list_button">Emoji List</string>
 </resources>
